@@ -1,0 +1,396 @@
+---
+// Why Choose Us Section
+---
+
+<section id='why-choose' class='why-choose section-padding'>
+	<div class='container'>
+		<div class='section-header'>
+			<h2 class='heading-xl'>Why Choose Frogman?</h2>
+			<p class='body-lg'>Experience the difference with our expert team</p>
+		</div>
+
+		<div class='bento-grid'>
+			<div class='bento-card large glass'>
+				<div class='card-icon'>
+					<svg
+						width='48'
+						height='48'
+						viewBox='0 0 24 24'
+						fill='none'
+						stroke='currentColor'
+						stroke-width='2'
+					>
+						<circle cx='12' cy='12' r='10'></circle>
+						<polyline points='12 6 12 12 16 14'></polyline>
+					</svg>
+				</div>
+				<h3 class='heading-md'>100% Safety Record</h3>
+				<p class='body-base'>
+					Our commitment to safety is unwavering. With RAID-certified
+					instructors and top-tier equipment, we maintain a perfect safety
+					record across thousands of dives.
+				</p>
+				<div class='stat-counter'>
+					<span class='stat-number' data-target='5000'>0</span>
+					<span class='stat-label'>+ Safe Dives</span>
+				</div>
+			</div>
+
+			<div class='bento-card medium glass'>
+				<div class='card-icon'>
+					<svg
+						width='40'
+						height='40'
+						viewBox='0 0 24 24'
+						fill='none'
+						stroke='currentColor'
+						stroke-width='2'
+					>
+						<path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path>
+						<circle cx='9' cy='7' r='4'></circle>
+						<path d='M23 21v-2a4 4 0 0 0-3-3.87'></path>
+						<path d='M16 3.13a4 4 0 0 1 0 7.75'></path>
+					</svg>
+				</div>
+				<h3 class='heading-sm'>Expert Team</h3>
+				<p class='body-sm'>10+ certified instructors from around the world</p>
+				<div class='stat-counter small'>
+					<span class='stat-number' data-target='10'>0</span>
+					<span class='stat-label'>+ Instructors</span>
+				</div>
+			</div>
+
+			<div class='bento-card medium glass'>
+				<div class='card-icon'>
+					<svg
+						width='40'
+						height='40'
+						viewBox='0 0 24 24'
+						fill='none'
+						stroke='currentColor'
+						stroke-width='2'
+					>
+						<polygon
+							points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'
+						></polygon>
+					</svg>
+				</div>
+				<h3 class='heading-sm'>Customer Satisfaction</h3>
+				<p class='body-sm'>Rated excellent by our divers</p>
+				<div class='stat-counter small'>
+					<span class='stat-number' data-target='98'>0</span>
+					<span class='stat-label'>% Happy Divers</span>
+				</div>
+			</div>
+
+			<div class='bento-card small glass'>
+				<div class='card-icon'>
+					<svg
+						width='32'
+						height='32'
+						viewBox='0 0 24 24'
+						fill='none'
+						stroke='currentColor'
+						stroke-width='2'
+					>
+						<path d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'></path>
+						<circle cx='12' cy='10' r='3'></circle>
+					</svg>
+				</div>
+				<h4 class='heading-sm'>Prime Location</h4>
+				<p class='body-sm'>Havelock Island</p>
+			</div>
+
+			<div class='bento-card small glass'>
+				<div class='card-icon'>
+					<svg
+						width='32'
+						height='32'
+						viewBox='0 0 24 24'
+						fill='none'
+						stroke='currentColor'
+						stroke-width='2'
+					>
+						<path d='M12 2L2 7l10 5 10-5-10-5z'></path>
+						<path d='M2 17l10 5 10-5'></path>
+						<path d='M2 12l10 5 10-5'></path>
+					</svg>
+				</div>
+				<h4 class='heading-sm'>RAID Certified</h4>
+				<p class='body-sm'>Global Standards</p>
+			</div>
+
+			<div class='bento-card wide glass'>
+				<div class='testimonial-content'>
+					<div class='quote-icon'>
+						<svg width='40' height='40' viewBox='0 0 24 24' fill='currentColor'>
+							<path d='M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z'></path>
+						</svg>
+					</div>
+					<p class='testimonial-text'>
+						"Frogman made my first dive unforgettable! The instructors were
+						patient, professional, and truly passionate about the ocean. I felt
+						safe every moment."
+					</p>
+					<div class='testimonial-author'>
+						<img
+							src='https://i.pravatar.cc/150?img=1'
+							alt='Customer testimonial'
+						/>
+						<div>
+							<strong>Sarah Johnson</strong>
+							<span>First-time Diver</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.why-choose {
+		background: var(--white);
+		position: relative;
+		padding-inline: var(--section-padding-inline);
+		padding-block: var(--section-padding-block);
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-header p {
+		margin-top: 1rem;
+	}
+
+	.bento-grid {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 1.5rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.bento-card {
+		padding: 2rem;
+		border-radius: var(--radius-xl);
+		background: var(--white);
+		border: 1px solid var(--gray-200);
+		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.bento-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		background: var(--gradient-ocean);
+		transform: scaleX(0);
+		transition: transform 0.3s ease;
+	}
+
+	.bento-card:hover::before {
+		transform: scaleX(1);
+	}
+
+	.bento-card:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-xl);
+	}
+
+	.card-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		padding: 1rem;
+		background: var(--gradient-ocean);
+		border-radius: var(--radius-md);
+		color: var(--white);
+		margin-bottom: 1.5rem;
+	}
+
+	.bento-card h3,
+	.bento-card h4 {
+		margin-bottom: 0.75rem;
+	}
+
+	.bento-card p {
+		color: var(--gray-600);
+	}
+
+	.stat-counter {
+		margin-top: 1.5rem;
+		display: flex;
+		align-items: baseline;
+		gap: 0.5rem;
+	}
+
+	.stat-number {
+		font-family: var(--font-heading);
+		font-size: 3rem;
+		font-weight: 900;
+		background: var(--gradient-ocean);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		line-height: 1;
+	}
+
+	.stat-counter.small .stat-number {
+		font-size: 2.5rem;
+	}
+
+	.stat-label {
+		font-size: 1rem;
+		color: var(--gray-600);
+		font-weight: 600;
+	}
+
+	.testimonial-content {
+		position: relative;
+	}
+
+	.quote-icon {
+		color: var(--primary);
+		opacity: 0.2;
+		margin-bottom: 1rem;
+	}
+
+	.testimonial-text {
+		font-size: 1.125rem;
+		line-height: 1.7;
+		color: var(--gray-700);
+		margin-bottom: 1.5rem;
+		font-style: italic;
+	}
+
+	.testimonial-author {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.testimonial-author img {
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	.testimonial-author strong {
+		display: block;
+		color: var(--dark);
+		font-weight: 600;
+	}
+
+	.testimonial-author span {
+		display: block;
+		color: var(--gray-500);
+		font-size: 0.875rem;
+	}
+
+	/* Grid Layout */
+	.bento-card.large {
+		grid-column: span 6;
+	}
+
+	.bento-card.medium {
+		grid-column: span 3;
+	}
+
+	.bento-card.wide {
+		grid-column: span 6;
+	}
+
+	.bento-card.small {
+		grid-column: span 3;
+	}
+
+	@media (max-width: 1024px) {
+		.bento-card.large {
+			grid-column: span 12;
+		}
+
+		.bento-card.medium {
+			grid-column: span 6;
+		}
+
+		.bento-card.wide {
+			grid-column: span 12;
+		}
+
+		.bento-card.small {
+			grid-column: span 6;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.bento-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.bento-card.large,
+		.bento-card.medium,
+		.bento-card.wide,
+		.bento-card.small {
+			grid-column: span 1;
+		}
+
+		.bento-card {
+			padding: 1.5rem;
+		}
+	}
+</style>
+
+<script>
+	// Animated counter
+	const observerOptions = {
+		threshold: 0.5,
+		rootMargin: '0px',
+	};
+
+	const animateCounter = (element: Element) => {
+		const target = parseInt(element.getAttribute('data-target') || '0');
+		const duration = 2000;
+		const step = target / (duration / 16);
+		let current = 0;
+
+		const updateCounter = () => {
+			current += step;
+			if (current < target) {
+				element.textContent = Math.floor(current).toString();
+				requestAnimationFrame(updateCounter);
+			} else {
+				element.textContent = target.toString();
+			}
+		};
+
+		updateCounter();
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				const counters = entry.target.querySelectorAll('.stat-number');
+				counters.forEach((counter) => {
+					if (counter.textContent === '0') {
+						animateCounter(counter);
+					}
+				});
+				observer.unobserve(entry.target);
+			}
+		});
+	}, observerOptions);
+
+	const whyChooseSection = document.querySelector('.why-choose');
+	if (whyChooseSection) {
+		observer.observe(whyChooseSection);
+	}
+</script>

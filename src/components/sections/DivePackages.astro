@@ -1,0 +1,274 @@
+---
+// Dive Packages Section
+const packages = [
+	{
+		title: 'Shore Dive',
+		description: 'Perfect for beginners, explore shallow reefs from the beach',
+		image:
+			'https://images.unsplash.com/photo-1570367364062-4ab01ebf0954?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHw0fHxzY3ViYSUyMGRpdmVyJTIwb2NlYW4lMjBzdW5saWdodCUyMHVuZGVyd2F0ZXJ8ZW58MHwwfHxibHVlfDE3NjE3MjY1MTl8MA&ixlib=rb-4.1.0&q=85',
+		alt: 'Shore diving experience - Bobbi Wu on Unsplash',
+		features: ['30-40 min dive', 'Max depth 12m', 'Equipment included'],
+		popular: false,
+	},
+	{
+		title: 'Boat Dive',
+		description: 'Explore deeper sites with vibrant marine life',
+		image:
+			'https://images.unsplash.com/photo-1544778896-f361697857e0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwxfHxib2F0JTIwdHJvcGljYWwlMjBpc2xhbmQlMjB0dXJxdW9pc2UlMjB3YXRlcnxlbnwwfDB8fGJsdWV8MTc2MTcyNjUyMHww&ixlib=rb-4.1.0&q=85',
+		alt: 'Dive boat on tropical water - Mohamed Sameeh on Unsplash',
+		features: ['45-60 min dive', 'Max depth 18m', 'Boat transfer included'],
+		popular: true,
+	},
+	{
+		title: 'Turtle Dive',
+		description: 'Swim with majestic sea turtles in their natural habitat',
+		image:
+			'https://images.unsplash.com/photo-1634435139976-69fc883c3799?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHw1fHxzZWElMjB0dXJ0bGUlMjBvY2VhbiUyMHN3aW1taW5nfGVufDB8MHx8Ymx1ZXwxNzYxNzI2NTE5fDA&ixlib=rb-4.1.0&q=85',
+		alt: 'Sea turtle encounter - Max Harlynking on Unsplash',
+		features: ['60 min dive', 'Turtle spotting', 'Photo opportunities'],
+		popular: false,
+	},
+	{
+		title: 'RAID Courses',
+		description: 'Get certified with internationally recognized RAID training',
+		image:
+			'https://images.unsplash.com/photo-1606438472743-ba3403ac13f1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHw4fHxzY3ViYSUyMGRpdmVycyUyMGdyb3VwJTIwdW5kZXJ3YXRlcnxlbnwwfDB8fGJsdWV8MTc2MTcyNjUxOXww&ixlib=rb-4.1.0&q=85',
+		alt: 'RAID training session - Houng-chi Chen on Unsplash',
+		features: ['Open Water 20', 'Explorer 30', 'Rescue Diver'],
+		popular: true,
+	},
+];
+---
+
+<section id='packages' class='packages section-padding'>
+	<div class='container'>
+		<div class='section-header'>
+			<h2 class='heading-xl'>Dive Packages</h2>
+			<p class='body-lg'>Choose your underwater adventure</p>
+		</div>
+
+		<div class='packages-grid'>
+			{
+				packages.map((pkg) => (
+					<div class='package-card glass'>
+						{pkg.popular && (
+							<div class='popular-badge'>
+								<svg
+									width='16'
+									height='16'
+									viewBox='0 0 24 24'
+									fill='none'
+									stroke='currentColor'
+									stroke-width='2'
+								>
+									<polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2' />
+								</svg>
+								Popular
+							</div>
+						)}
+						<div class='package-image'>
+							<img src={pkg.image} alt={pkg.alt} />
+							<div class='image-overlay' />
+						</div>
+						<div class='package-content'>
+							<h3 class='heading-md'>{pkg.title}</h3>
+							<p class='body-base'>{pkg.description}</p>
+							<ul class='features-list'>
+								{pkg.features.map((feature) => (
+									<li>
+										<svg
+											width='16'
+											height='16'
+											viewBox='0 0 24 24'
+											fill='none'
+											stroke='currentColor'
+											stroke-width='2'
+										>
+											<polyline points='20 6 9 17 4 12' />
+										</svg>
+										{feature}
+									</li>
+								))}
+							</ul>
+							<a href='#contact' class='btn-secondary'>
+								Book Now
+								<svg
+									width='16'
+									height='16'
+									viewBox='0 0 24 24'
+									fill='none'
+									stroke='currentColor'
+									stroke-width='2'
+								>
+									<line x1='5' y1='12' x2='19' y2='12' />
+									<polyline points='12 5 19 12 12 19' />
+								</svg>
+							</a>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<style>
+	.packages {
+		background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+		padding-inline: var(--section-padding-inline);
+		padding-block: var(--section-padding-block);
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-header p {
+		margin-top: 1rem;
+	}
+
+	.packages-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.package-card {
+		border-radius: var(--radius-xl);
+		overflow: hidden;
+		background: var(--white);
+		border: 1px solid var(--gray-200);
+		transition: all 0.4s ease;
+		position: relative;
+	}
+
+	.package-card:hover {
+		transform: translateY(-10px) rotateX(2deg);
+		box-shadow: var(--shadow-2xl);
+	}
+
+	.popular-badge {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: 10;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1rem;
+		background: var(--coral);
+		color: var(--white);
+		border-radius: 24px;
+		font-weight: 600;
+		font-size: 0.875rem;
+		box-shadow: var(--shadow-lg);
+	}
+
+	.package-image {
+		position: relative;
+		height: 250px;
+		overflow: hidden;
+	}
+
+	.package-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.4s ease;
+	}
+
+	.package-card:hover .package-image img {
+		transform: scale(1.1);
+	}
+
+	.image-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(
+			180deg,
+			transparent 0%,
+			rgba(0, 0, 0, 0.3) 100%
+		);
+	}
+
+	.package-content {
+		padding: 2rem;
+	}
+
+	.package-content h3 {
+		margin-bottom: 0.75rem;
+	}
+
+	.package-content p {
+		margin-bottom: 1.5rem;
+		color: var(--gray-600);
+	}
+
+	.features-list {
+		list-style: none;
+		margin-bottom: 1.5rem;
+	}
+
+	.features-list li {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.5rem 0;
+		color: var(--gray-700);
+		font-size: 0.9rem;
+	}
+
+	.features-list svg {
+		color: var(--primary);
+		flex-shrink: 0;
+	}
+
+	.package-content .btn-secondary {
+		width: 100%;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+
+	@media (max-width: 768px) {
+		.packages-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.package-card:hover {
+			transform: translateY(-5px);
+		}
+	}
+</style>
+
+<script>
+	// Add 3D tilt effect on mouse move
+	const packageCards = document.querySelectorAll('.package-card');
+
+	packageCards.forEach((card) => {
+		card.addEventListener('mousemove', (e) => {
+			const rect = card.getBoundingClientRect();
+			const x = e.clientX - rect.left;
+			const y = e.clientY - rect.top;
+
+			const centerX = rect.width / 2;
+			const centerY = rect.height / 2;
+
+			const rotateX = (y - centerY) / 20;
+			const rotateY = (centerX - x) / 20;
+
+			(card as HTMLElement).style.transform =
+				`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+		});
+
+		card.addEventListener('mouseleave', () => {
+			(card as HTMLElement).style.transform =
+				'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+		});
+	});
+</script>
